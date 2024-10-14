@@ -108,9 +108,8 @@ body {
 }
 
 .search {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
+  flex-direction : column;
+  gap: 20px;
 }
 
 .search input {
