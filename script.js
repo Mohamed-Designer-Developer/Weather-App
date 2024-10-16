@@ -4,6 +4,7 @@ const humidity = document.getElementById("humidity");
 const speed = document.getElementById("wind");
 let btn = document.querySelector("button");
 let search = document.getElementById("search");
+let weatherIcon = document.querySelector(".weather-icon");
 
 const apiKey = "640993374fab7ab04f600cc32a89a1d6";
 const apiURL =
