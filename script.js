@@ -13,6 +13,24 @@ async function getWeather(city) {
   const response = await fetch(apiURL + city + `&appid=${apiKey}`);
   const data = await response.json();
 
+    if (data.weather[0].main === 'Clouds') {
+    weatherIcon.src = 'clouds.png';
+  }
+  else if (data.weather[0].main === 'Clear') {
+    weatherIcon.src = 'clear.png';
+  }
+  else if (data.weather[0].main === 'Rain') {
+    weatherIcon.src = 'rain.png';
+  }
+  else if (data.weather[0].main === 'Snow') {
+    weatherIcon.src ='snow.png';
+  }
+  else if (data.weather[0].main === 'Drizzle') {
+    weatherIcon.src = 'drizzle.png';
+  }
+  else {
+    weatherIcon.src = 'rain.png';
+  }
   // get Data Dynamic
   cityName.innerHTML = data.name;
   temp.innerHTML = Math.round(data.main.temp) + "°C";
